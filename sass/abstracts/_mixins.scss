@@ -1,0 +1,10 @@
+@mixin underline($font-weight) {
+    font-weight: $font-weight;
+    text-decoration: underline;
+}
+
+@mixin fill-color($count, $color) {
+    @for $i from 1 to $count {
+        --color#{$i}: #{$color};
+    }
+}

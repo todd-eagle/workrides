@@ -1,0 +1,95 @@
+.heading-1 {
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+    letter-spacing: .1rem;
+  
+    &--main {
+       font-size: 4.8rem; 
+       word-spacing: 5px;
+       display: block;
+
+    }
+    
+   &--sub {
+      margin-top: -.5rem;
+      font-size: 2rem;
+      word-spacing: 2px; 
+      display: block;
+   }
+}
+
+%heading {
+   text-align: center; 
+   line-height: 1;
+}
+
+ .heading-2 {
+   font-family: $font-secondary;
+   @extend %heading;
+   letter-spacing: .2rem;
+   font-weight: 300;
+   text-transform: uppercase; 
+   
+   &--home-sized {
+      font-size: calc(2rem + 2vw);
+   }
+   
+   &::after {
+      content: "";
+      margin: 0 auto;
+      height: .2rem;
+      display: block;
+      margin-top: 1.5rem;
+      width: 25rem;
+      background-color: $color-primary-orange;
+  }
+
+   &--2 {
+      font-size: 3.8rem;
+    //  font-size: calc(.2rem + 2.3vw);
+
+      letter-spacing: .3rem;
+      margin-bottom: 2rem;
+
+      &::after {
+         display: none;
+      }
+   }
+}
+
+
+.heading-3 {
+   font-family: $font-primary;
+   @extend %heading;
+}
+
+.heading-4 {
+   font-family: $font-primary;
+   @extend %heading;
+   text-align: center;
+   line-height: 1;
+   font-weight: 600;
+   font-size: 3rem;
+   letter-spacing: .1rem; 
+
+}
+
+.section-text {
+   margin-top: 1rem;
+   font-size: calc(1.6rem + .48vw);
+
+   &--food {
+      font-size: calc(.4rem + 1vw);
+   }
+
+   &--lead {
+      text-align: center;
+   }
+}
+
+.text {
+   font-size: 2.3rem;
+   letter-spacing: .1rem; 
+}

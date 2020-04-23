@@ -1,0 +1,115 @@
+.footer {
+    grid-column: fullwidth-start / fullwidth-end;   
+    display: grid;
+    grid-template-rows: repeat(2, minmax(6rem, 6.5rem));
+    grid-template-columns: minmax(3rem, 1fr) 
+                            [centercontent-start]minmax(10rem, 114rem)[centercontent-end]
+                            minmax(3rem, 1fr);   
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/footer.jpg);
+    background-size: cover;
+    background-position: center;
+    color: rgb(145, 145, 145);
+    row-gap: 2rem;
+    padding-bottom: 5rem;
+
+   
+    &__info {
+        padding: 5rem 4rem;
+        grid-column: 2 / 3;      
+        grid-row: 1 / 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 3.5rem;
+
+        @media only screen and (max-width: $bp-phone-port-large) {
+            justify-content: center;
+        }
+       
+       .footer-nav {
+            grid-column: 2 / 3;      
+            grid-row: 1 / 2;
+            display: grid;
+            grid-template-columns: repeat(5, min-content);
+            column-gap: 1.5rem;
+
+            @media only screen and (max-width: $bp-phone-port-large) {
+               margin-right: 1rem;
+               column-gap: 1rem;
+            }
+    
+            &__item {
+                list-style: none;
+                align-self: center;
+                padding-bottom: 3rem;
+            }
+           
+            &__nav-link {
+                text-decoration: none;
+                font-size: 1.6rem;
+                color: rgb(145, 145, 145);
+
+                &:hover {
+                    color: #fff;
+                }
+            }         
+        }
+
+       .social-nav {
+            grid-column: 2 / 3;      
+            grid-row: 2 / 3;
+            display: grid;
+            grid-template-columns: repeat(3, 3rem);
+            grid-gap: 1.4rem;
+            list-style: none;   
+            align-content: center;
+            padding-bottom: 3rem;
+
+            @include  fill-color(4 , dimgrey);
+            &__icon {   
+                height: 2.5rem;
+                width: 2.5rem;   
+                
+                &--1 {
+                    &:hover {
+                        --color1: #1877f2;
+                    }
+                }
+
+                &--2 {
+                    &:hover {
+                        --color3: #1da1f2;
+                    }
+                }
+
+                &--3 {
+                    &:hover {
+                        --color2: #e4405f;
+                    }
+                }
+            }
+        }
+    }
+    
+    &__copy-right {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        display: grid;
+        
+        justify-items: center;
+        row-gap: 1rem;
+        font-size: 1.5rem;
+       
+        &--content {  
+            letter-spacing: .1rem;
+            word-spacing: .2rem;
+            text-align: center;
+        }
+
+        .dim {
+            color: rgb(97, 97, 97);
+        }
+    }
+}
+

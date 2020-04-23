@@ -1,0 +1,331 @@
+.page-header__serve{
+    .heading-1 {
+        grid-column: 5 / 10;
+        grid-row-start: 5;
+        justify-self: center;
+        align-self: center;
+
+        // font-size: 5.8rem;
+        font-size: calc(2rem + 2.2vw);
+
+
+        @media only screen and (max-width: $low-res-screen) {
+            grid-column: 4 / 10;
+         }
+
+         @media only screen and (max-width: $bp-tab-land) {
+            grid-column: 3 / -1;
+            justify-self: center;
+         }
+         
+         @media only screen and (max-width: $bp-tab-med) {
+            grid-column: 1 / -1;
+         }  
+
+       
+        @media only screen and (max-width: $bp-phone-port-large) {
+           font-size: calc(1.7rem + 1.9vw);
+         }
+        
+        &--service{
+            font-weight: 400;
+            text-align: left;
+           
+            @media only screen and (max-width: $bp-tab-land-small) {
+                text-align: center;;
+            }
+
+            text-shadow: rgb(100, 100, 100) .07rem .07rem;
+            display: block;
+            
+        }
+    }
+}
+
+.services {
+    grid-template-rows: repeat(3, auto);
+    grid-column: fullwidth;
+    background-color: rgb(224, 224, 224);
+    display: grid;
+
+    .section-text {
+    //    font-size: 2.1rem;
+       font-size: calc(1.4rem + .48vw);
+    }
+
+    .heading-2 {
+        &--2 {
+            text-align: left;  
+            font-size: calc(1.3rem + 1.7vw);
+
+            @media only screen and (max-width: $bp-tab-land) {
+                text-align: center;
+                font-size: calc(2.5rem + 2vw);
+            }
+        }
+    }
+
+    .service-content-1 {
+       // margin-top: 3rem;
+       display: grid;
+        grid-row: 4 / 5;
+        grid-column: fullcontent-start / column-end 4;
+       
+        @media only screen and (max-width: $bp-tab-land) {
+            grid-column: fullcontent;
+            justify-content: center;
+        }
+
+        background-image: linear-gradient(rgba(white, .9), rgba(white, .9)), url(../img/24.jpg);
+        background-size: cover;
+        background-position: center;
+
+        color: rgb(75, 75, 75);
+       
+        &__info {
+            margin-top: 4rem;
+            padding: 4rem 5rem 8rem 4rem;
+
+            @media only screen and (max-width: $low-res-screen) {
+                padding: 1rem 3rem 4rem 3rem;
+            }
+
+            @media only screen and (max-width: $bp-tab-land) {
+                grid-column: 3 / 9;
+                padding: 2rem 5rem 4rem 4rem;
+            }
+
+            @media only screen and (max-width: $bp-phone-port-large) {
+                margin-top: 1rem;
+                padding-bottom: 3.5rem;
+            }
+   
+        }
+    }
+
+    .service-content-2 {
+      //  margin-top: 3rem;
+        grid-row: 4 / 5;
+        display: grid;
+        grid-column: column-start 5 / fullcontent-end;
+        @media only screen and (max-width: $bp-tab-land) {
+            grid-row: 5 / 6;
+            grid-column: fullcontent;
+            justify-content: center;
+         }  
+      
+        background-image: linear-gradient(rgba(white, .85), rgba(white, .85)), url(../img/25.jpg);
+        background-size: cover;
+        background-position: center;
+        color: rgb(75, 75, 75);
+
+        &__info {
+             margin-top: 4rem;
+             padding: 4rem 1rem 8rem 4rem;
+
+             @media only screen and (max-width: $low-res-screen) {
+                padding: 1rem 3rem 4rem 3rem;
+             }
+
+             @media only screen and (max-width: $bp-phone-port-large) {
+                margin-top: 2rem;
+                padding-bottom: 3.5rem;
+            }
+         }
+    }
+}
+
+.food {
+    grid-template-rows: 4rem repeat(3, auto) 6rem;
+
+    @media only screen and (max-width: $bp-phone-port-large) {
+        grid-template-rows: 3rem repeat(3, auto) 4rem; 
+    }
+
+    background-image: linear-gradient(to left, rgba(rgb(218, 218, 218), .1), rgba(rgb(180, 180, 180), .1)), url(../img/29.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+
+    .heading-2 {
+        font-size: calc(2.7rem + 1.1vw);
+    }
+
+    .section-text {
+        font-size: calc(1.6rem + .48vw);
+        text-align: center;
+    }
+
+    .food-info {
+        margin-top: 3rem;
+        grid-row: 4/5;
+        grid-column: centercontent;
+        display: grid;
+        grid-template-columns: minmax(26rem, .9fr) minmax(min-content, .8fr);
+
+        @media only screen and (max-width: $bp-tab-land) {
+            grid-template-columns: minmax(26rem, 1.1fr) minmax(min-content, .8fr);
+        }
+
+        @media only screen and (max-width:$bp-tab-port) {
+            grid-template-columns: minmax(26rem, 1fr);
+            margin-top: .5rem;
+        }
+       
+        &__text {
+           grid-column: 1 / 2;
+            color: rgb(53, 53, 53);
+            margin-top: 1rem;
+            background-image: linear-gradient(rgba(rgb(252, 252, 252), .5), rgba(rgb(238, 238, 238), .5));
+            border-radius: 1rem;
+            box-shadow: 0 2rem 5rem rgba(#000, .2);
+            padding:  3rem 4rem; 
+            
+            @media only screen and (max-width: $bp-phone-port-large) {
+                padding:  2rem 2rem; 
+            }
+
+            font-size: calc(1.6rem + .48vw);
+        }
+
+        .section-text {
+            font-size: calc(1.4rem + .48vw);
+            text-align: left;
+        }    
+
+        .heading-3 {
+            grid-template-columns: auto-fit max-content auto-fit;
+            font-weight: 300;
+            font-size: 2vw;
+            column-gap: .5rem;
+
+            &::after {
+                content: "";
+                margin: 0 auto;
+                height: .2rem;
+                display: block;
+                margin-top: 1rem;
+                width: 8rem;
+                background-color: #e67e22;
+            }
+        }
+    }
+}
+
+.transit {
+    grid-template-rows: 4rem repeat(3, auto) 6rem;
+
+    @media only screen and (max-width: $bp-phone-port-large) {
+        grid-template-rows: 3rem repeat(3, auto) 4rem;
+    }
+
+    background-image: linear-gradient(rgba(rgb(70, 70, 70), .7), rgba(rgb(100, 100, 100), .3)), url(../img/23.jpg);
+    background-size: cover;
+    background-position: center;
+
+    color: #ffffff;
+    text-align: center;
+   
+    .heading-2 {
+        font-size: calc(2.7rem + 1.1vw);
+    }
+
+    .section-text {
+        font-size: calc(1.6rem + .48vw);
+    }
+
+    .transit-info {
+        margin-top: 1rem;
+        grid-row: 4/5;
+        grid-column: centercontent;
+
+        @media only screen and (max-width: $bp-phone-port-large) {
+            grid-column: fullcontent;
+            padding: 0 3rem;
+        }
+
+        padding: 0 5rem;
+      //  position: relative;
+      
+      .section-text {
+        //    font-size: 2.1rem;
+           font-size: calc(1.4rem + .48vw);
+           text-align: left;
+        }
+
+        &__quote {
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+            padding: 0 8rem;
+
+            @media only screen and (max-width: $bp-tab-land-small) {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                padding: 0 3rem;
+            }
+            
+            background-image: linear-gradient(rgba(rgb(99, 99, 99), .7), rgba(rgb(99, 98, 99), .3));
+            border-radius: 1rem;
+            
+            .section-text {
+                padding-top: 4rem;
+              //  font-size: 2.5rem;
+                font-size: calc(1.8rem + .48vw);
+                text-align: left;
+
+                @media only screen and (max-width: $bp-phone-port-large) {
+                    padding-top: 2rem;
+                }
+
+                &--publication {
+                    padding-top: 1rem;
+                    padding-bottom: 4rem;
+                    @media only screen and (max-width: $bp-phone-port-large) {
+                        padding-bottom: 2rem;
+                    }
+                   // font-size: 2.6rem;
+                    font-size: calc(1.9rem + .48vw);
+                    text-align: center;
+                }
+            }
+ 
+            .quote-left {
+                font-family: 'IM Fell Great Primer SC', serif;
+                font-size: 40rem;
+                height: 10rem;
+                color: #a5a5a5;
+                float: left;
+                opacity: .2;
+                margin-top: -15rem;
+                margin-left: -5rem;
+            }
+
+            .quote-right {
+                font-family: 'IM Fell Great Primer SC', serif;
+                font-size: 40rem;
+                height: 10rem;
+                float: right;
+                color: #a5a5a5;
+                opacity: .2;
+                margin-top: -36rem;
+                margin-right: -4rem;
+                
+            }
+        }
+
+        .heading-3 {
+            font-size: 2.8rem;
+
+            &::after {
+                content: "";
+                margin: 0 auto;
+                height: .4rem;
+                display: block;
+                margin-top: 1.5rem;
+                width: 8rem;
+                background-color: white;
+            }
+        }
+
+    }
+}

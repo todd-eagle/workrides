@@ -1,0 +1,71 @@
+// Contact Form
+.contact-form {
+    display: grid;
+    margin-left: 4.5rem;
+    grid-column: 3 / 8;
+    grid-row: 3/-1;
+    row-gap: 2.2rem;
+
+    @media only screen and (max-width: $low-res-screen) {
+        grid-column: 3 / 9;
+        margin-left: unset;
+    }
+
+    @media only screen and (max-width: $bp-tab-land) {
+        grid-column: 2 / 10;
+    }
+
+    @media only screen and (max-width: $bp-tab-land-small) {
+       width: 100%;
+    }
+
+    @media only screen and (max-width: $bp-phone-port-large) {
+        margin-top: -4rem;
+     }
+   
+    padding: 5rem 0 9rem 0;
+    color: rgb(63, 63, 63);
+
+    &__input {
+        border: none;
+        box-shadow: 0 1rem 2rem rgba(#000000, .5);
+        font-size: 2.4rem;
+        height: 4.7rem;
+        padding-left: 2rem;
+        border-radius: 1.2rem;
+      //  background-color: white;
+        background-repeat: no-repeat;
+        opacity: .8;
+        &--validate:focus:valid,
+        &--validate:not(:focus):valid {
+            background-image: url(/img/SVG/checkmark.svg);
+            background-size: 4rem;
+            background-position-x: 98%;
+            background-position-y: .35rem;
+        }
+        &--validate:focus:invalid,
+        &--validate:not(:focus):invalid:not(:placeholder-shown) {
+            background-image: url(/img/SVG/cross.svg); 
+            background-size: 3.4rem; 
+            background-position-y: .7rem;  
+            background-position-x: 97.5%;
+        }
+
+        @media only screen and (max-width: $bp-phone-port-large) {
+            width: 100%;
+        }
+    }
+
+    textarea {
+        height: 20rem;
+        font-family: inherit;
+    }
+
+    .btn {
+        font-size: 2.1rem;
+        padding: 1rem 3rem;
+        letter-spacing: .1rem;
+        color: #ffffff;
+        justify-self: center;  
+    }
+}

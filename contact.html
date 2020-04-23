@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="Contact us.  If you need us, we're here." name="description">
+
+    <link href="https://fonts.googleapis.com/css?family=Gayathri:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.typekit.net/qtj0jmk.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <title>Contact Work Rides</title>
+</head>
+<body class="container">
+   <header class="header page-header page-header__contact">
+    <div class="back-drop">&nbsp;</div>
+    <a href="/" class="logo-position"><img src="img/logo-white.png" alt="Work Rides logo" class="page-header__logo"></a>
+    <button class="page-nav__nav-button" aria-label="Mobile Menu">
+        <span class="nav-icon">&nbsp;</span>
+    </button>
+    <ul class="nav page-nav page-nav__hide">
+        <li class="nav__item nav__org-title"> <button class="nav__item--close-button"><span class="nav-icon nav-icon__close">&nbsp;</span></button><a href="/" class="nav__link"><img class="nav__org-img" src="img/logo-white.png" alt="Work Rides logo"></a></li>
+        <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+        <li class="nav__item"><a href="about.html" class="nav__link">Our story</a></li>
+        <li class="nav__item"><a href="#" class="nav__link selected">Contact</a></li>
+        <li class="nav__item"><a href="donate.html" class="nav__link donate">Donate</a></li>
+    </ul> 
+    <div class="heading-2">Contact Us.</div>
+    <form class="contact-form">
+        <p class="mail-status"></p>
+        <input type="text" aria-label="Enter full name" name="name" id="name" placeholder="Full name" minlength="5" class="contact-form__input contact-form__input--validate" required>
+        <input type="email" aria-label="Enter email address" name="email" id="email" placeholder="Email" class="contact-form__input contact-form__input--validate" required>
+        <input type="text" aria-label="Enter subject title" name="subject" id="subject" placeholder="Subject" minlength="3" class="contact-form__input contact-form__input--validate" required>
+        <textarea aria-label="Enter your message" name="message" id="message" placeholder="Message" minlength="5" class="contact-form__input contact-form__input--validate" required></textarea>
+        <button class="btn btn--orange" onClick="sendContact();">Send</button>
+    </form>
+
+   </header>
+   <div class="section-bar section-bar--grey-dark"></div>
+   <section class="contact">
+    <h2 class="heading-2">Contacts</h2>
+    <div class="contact-info">
+        <div class="contact-info__email">
+            <div>
+                <p class="contact-info__email--info">
+                    General Inquiries
+                </p>
+                <a class="contact-info__email--mailto" href="mailto:inquiries@workrides.org">inquiries@workrides.org</a>
+            </div>
+            <div>
+                <p class="contact-info__email--info">
+                    Donation Inquiries
+                </p>
+                <a class="contact-info__email--mailto" href="mailto:donations@workrides.org">donations@workrides.org</a>
+            </div>
+            <div>
+                <p class="contact-info__email--info">
+                    Businesses
+                </p>
+                <a class="contact-info__email--mailto" href="mailto:business@workrides.org">business@workrides.org</a>
+            </div>
+            
+        </div>
+        <div class="contact-info__email">  
+            <div>
+                <p class="contact-info__email--info">
+                    Memberships
+                </p>
+                <a class="contact-info__email--mailto" href="mailto:memberships@workrides.org">members@workrides.org</a>
+            </div> 
+            <div>
+                <p class="contact-info__email--info">
+                    Riders
+                </p>
+                <a class="contact-info__email--mailto" href="mailto:riders@workrides.org">riders@workrides.org</a>
+            </div>
+            <div>
+                <p class="contact-info__email--info">
+                    Press
+                </p>
+                <a class="contact-info__email--mailto" href="mailto:press@workrides.org">press@workrides.org</a>
+            </div>
+        </div>
+        <div class="contact-info__address">
+            <h3 class="heading-logo">Work Rides</h3>
+            <p class="contact-info__address--info">
+                P.O. Box 454
+                Newberry, SC 29108
+            </p>
+            <img src="img/logo-black.png" alt="Work Rides logo" class="contact-info__address--logo">
+        </div>
+    </div>
+
+   </section>
+   <footer class="footer">
+        <div class="footer__info">
+            <ul class="footer-nav">
+                <li class="footer-nav__item"><a href="#" class="footer-nav__nav-link">About</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__nav-link">Press</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__nav-link">Contact</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__nav-link">Careers</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__nav-link">Terms</a></li>
+            </ul>
+
+            <ul class="social-nav">
+                <li class="social-nav__item"><a href="https://facebook.com/workrides.org" target="_blank" rel="noreferrer" aria-label="Join us on Facebook"><svg class="social-nav__icon social-nav__icon--1"><use href="img/social-media.svg#icon-facebook"></use></svg></a></li>
+                <li class="social-nav__item"><a href="https://twitter.com/workrides" target="_blank" rel="noreferrer" aria-label="Join us on Twitter"><svg class="social-nav__icon social-nav__icon--2"><use href="img/social-media.svg#icon-twitter"></use></svg></a></li>
+                <li class="social-nav__item"><a href="https://instagram.com/workridesdotorg" target="_blank" rel="noreferrer" aria-label="Join us on Instagram"><svg class="social-nav__icon social-nav__icon--3"><use href="img/social-media.svg#icon-instagram"></use></svg></a></li>
+            </ul>
+        </div>
+        <div class="footer__copy-right">
+            <p class="footer__copy-right--content">Copyright © 2020 by Work Rides. All rights reserved.</p>
+            <p class="footer__copy-right--content dim">Site design and development by Todd Eagle.</p>
+        </div>
+    </footer>          
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

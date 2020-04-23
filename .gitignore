@@ -1,0 +1,6 @@
+.idea/
+img/
+img/SVG/
+node_modules/
+test.*
+formtest.html

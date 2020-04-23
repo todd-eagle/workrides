@@ -1,0 +1,13 @@
+.section-bar {
+    grid-column: fullwidth;
+    padding: .3rem;
+
+    &--grey-light {
+        background-color: $color-grey-light-2;
+    }
+
+    &--grey-dark {
+        background-color: $color-grey-dark-3;
+    }
+}
+

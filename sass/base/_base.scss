@@ -1,0 +1,43 @@
+$bp-phone-port: 27.5em;
+$bp-phone-port-large: 35em;
+$bp-phone-port-large-1: 37.5rem; 
+$bp-tab-port: 47.5em;
+$bp-tab-land-small: 48.75em;
+$bp-tab-med: 51.875em;
+$bp-tab-land: 56.3em;
+$bp-tab-land-large: 64em;
+$low-res-screen: 85.375em;
+$bp-mid-res-screen: 98em;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    //dev
+   // font-size: 5rem;
+
+   // display: grid;
+    grid-template-columns: [fullwidth-start] minmax(5rem, 1fr) 
+                           [centeredwidth-start] repeat(8, [column-start] minmax(min-content, 14rem) [column-end])
+                           [centeredwidth-end] 
+                           minmax(5rem, 1fr) [full-end];
+}
+
+

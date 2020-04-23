@@ -1,0 +1,33 @@
+.u-highlight {
+    
+    &--purple {
+        color: $color-primary-purple;
+    }
+
+    &--orange  {
+        color: $color-primary-orange;
+    }
+
+    &--green  {
+        color: $color-primary-green;
+    }
+}
+
+.u-underline {
+  
+    &--purple {
+        @include underline($font-weight-heavy);
+        color: $color-primary-purple;
+    }
+
+    &--green {
+        @include underline($font-weight-heavy);
+        color: $color-primary-green;
+    }
+
+    &--orange {
+        @include underline($font-weight-heavy);
+        color: $color-primary-orange;
+    }
+
+}
