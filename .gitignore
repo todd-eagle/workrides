@@ -2,5 +2,6 @@
 img/
 img/SVG/
 node_modules/
+package-lock.json
 test.*
 formtest.html
